@@ -1,0 +1,5 @@
+2019-12-24 15:11:43,992|datang      : DEBUG    this is Debug
+2019-12-24 15:11:43,994|datang      : INFO     this is info
+2019-12-24 15:11:43,994|datang      : WARNING  this is warning
+2019-12-24 15:11:43,994|datang      : ERROR    this is error
+2019-12-24 15:11:43,994|datang      : CRITICAL this is critical
