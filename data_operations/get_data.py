@@ -36,6 +36,18 @@ class GetData:
         else:
             return None
 
+    def get_header(self, row):
+        col1 = int(data_operations.data_config.get_header())
+        col2 = int(data_operations.data_config.get_header_value())
+        is_header = self.opera_excel.get_cell_value(row, col1)
+        if is_header != '':
+            header_raw = self.opera_excel.get_cell_value(row, col2)
+#            print(len(header_raw.splitlines()))
+            return dict(line.split(":", 1) for line in header_raw.splitlines())
+#            return None
+        else:
+            return None
+
     # 获取请求方式
     def get_request_method(self, row):
         col = int(data_operations.data_config.get_run_way())
@@ -79,6 +91,10 @@ class GetData:
 
     def write_result(self, row, value):
         col = int(data_operations.data_config.get_result())
+        self.opera_excel.write_value(row, col, value)
+
+    def write_reponse(self, row, value):
+        col = int(data_operations.data_config.get_response())
         self.opera_excel.write_value(row, col, value)
 
     # 获取依赖数据的key

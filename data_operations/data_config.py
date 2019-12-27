@@ -7,12 +7,14 @@ class global_var:
     run = '3'
     request_way = '4'
     header = '5'
-    case_depend = '6'
-    data_depend = '7'
-    field_depend = '8'
-    data = '9'
-    expect = '10'
-    result = '11'
+    case_depend = '7'
+    data_depend = '8'
+    field_depend = '9'
+    data = '10'
+    expect = '11'
+    response = '12'
+    result = '13'
+    headers = '6'
 #获取caseid
 def get_id():
     return global_var.Id
@@ -48,5 +50,8 @@ def get_expect():
 def get_result():
     return global_var.result
 
+def get_response():
+    return global_var.response
+
 def get_header_value():
-    return global_var.header
+    return global_var.headers

@@ -8,10 +8,13 @@ from data_operations.dependent_data import DependdentData
 from tool.send_email import SendEmail
 from tool.operation_header import OperationHeader
 from tool.operation_json import OperetionJson
+
+
+filename = 'D:\\testcase.xlsx'
 class RunTest:
     def __init__(self):
         self.run_method = RunMethod()
-        self.data = GetData()
+        self.data = GetData(filename)
         self.com_util = CommonUtil()
         self.send_mai = SendEmail()
 

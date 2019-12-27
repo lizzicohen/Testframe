@@ -9,10 +9,10 @@ class Log:
 
     def __init__(self):
         rc = ReadConfig()
-        logname = rc.read("log_dir_name")
-        filename = rc.read("file_name")
-        projectname = rc.read("project_name")
-        loglevel = int(rc.read("log_level"))
+        logname = rc.read("Log", "log_dir_name")
+        filename = rc.read("Log", "file_name")
+        projectname = rc.read("Log", "project_name")
+        loglevel = int(rc.read("Log", "log_level"))
         logpath = os.path.abspath(os.path.dirname(os.getcwd())) + os.sep + logname
         if not os.path.isdir(logpath):
             os.mkdir(logpath)
