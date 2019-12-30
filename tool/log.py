@@ -1,6 +1,5 @@
 import logging
 import os
-import time
 import logging.handlers
 from tool.read_config import ReadConfig
 
